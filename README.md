@@ -1,0 +1,4 @@
+- mvn clean install
+- run the starter file
+- change the port if required(currently runs on 8085)
+- https://localhost:8085/user/1
