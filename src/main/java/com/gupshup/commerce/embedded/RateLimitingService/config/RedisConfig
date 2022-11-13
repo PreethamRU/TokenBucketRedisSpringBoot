@@ -40,5 +40,15 @@ public class RedisConfig
         return new JCacheProxyManager<>(cacheManager.getCache("cache"));
     }
 
+    /**
+     * reference:
+     * https://github.com/MarcGiffing/bucket4j-spring-boot-starter/issues/73
+     * */
+    @Bean
+    @Primary
+    public SyncCacheResolver bucket4jCacheResolver(CacheManager cacheManager) {
+        return new JCacheCacheResolver(cacheManager);
+    }
+
 
 }
